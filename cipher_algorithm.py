@@ -53,38 +53,9 @@ elif ((selectedAlgorithm.lower() == '6')):
 ########################## write the ouput cipher Text ########################################333
 
 if(cipher_path != './') :  #one of algorithms has been selected
-    if(selectedAlgorithm.lower()=='6'):
-        cipher_file=open(cipher_path,"r+")
-        for cipher_msg in cipher_text:
-          #  binary=' '.join(format(ord(x), 'x') for x in cipher_msg)
-            #print(cipher_msg)
-            #print(cipher_msg.encode('unicode'))
-            bytearray_data=bytearray(cipher_msg.encode('utf-8'))
-          #  cipher_file.write(bytes(bytearray_data))
-            test_bytes=bytes(b'{\x03\xff\x00d')
-            #cipher_file.write(bytearray_data)
-            #cipher_file.write(test_bytes)
-            cipher_file.write(cipher_msg)
-        #print(bytes(test_bytes))
-            #print(bytearray_data)
-            #print(chr(0x92))
-        #cipher_file.writelines(cipher_text)
-        #validate_cipher=open(cipher_path,"r")
-        test=[]
-
-        test = cipher_file.readlines()
-        print(test)
-        #while(test!=''):
-
-            #f(test[] != ''):
-            #print(test)
-            #print(chr(int(test) ^ ord('S')))
-            #print('test_succeed')
-
-    else:
-        cipher_file=open(cipher_path,"w")
-        #for ciph_msg in cipher_text :
-        cipher_file.writelines(cipher_text)
+    cipher_file=open(cipher_path,"w")
+    #for ciph_msg in cipher_text :
+    cipher_file.writelines(cipher_text)
     cipher_file.close()
     plain_file.close()
 

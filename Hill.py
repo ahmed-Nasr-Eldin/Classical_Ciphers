@@ -55,7 +55,6 @@ def hill_cipher_3x3(plainText,matix_key):
         cipher_text=""
         if(len(str_data)%2 == 0) :
             str_data+='X'
-
         diags=strToRTrigraphs((str_data))
         print(diags)
         for diag in diags:
